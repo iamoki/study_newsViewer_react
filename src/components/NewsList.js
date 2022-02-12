@@ -37,17 +37,17 @@ const NewsList = ({ category }) => {
         };
         fetchData();
     }, [category]);
-
+    
     // 대기 중일 때
     if(loading) {
         return <NewsListBlock>대기 중..</NewsListBlock>
     }
-
+    
     // 아직  articles값이 설정되지 않았을 때
     if(!articles) {
         return null;
     }
-
+    
     return (
         <NewsListBlock>
             {articles.map(article => (
